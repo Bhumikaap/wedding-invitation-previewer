@@ -1,0 +1,188 @@
+/* Document setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url(./images/background.jpg); 
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    
+    }
+
+ .line {
+border: 2px solid whitesmoke;
+border-radius: 5px;
+
+} 
+
+/* Main Grid */
+.main-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'inputs templates';
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 5rem 1fr;
+    justify-content: center;
+}
+
+/* Header grid */
+.header {
+    grid-area: header;
+    text-align: center;
+    font-size:large; 
+    color:#1d1160;
+    font-family:"helvetica";
+ transition: 1.5s;
+ transform: scale(1.1);
+}
+
+/* Input grid & children */
+.inputs {
+    grid-area: inputs;
+
+    text-align: center;
+   margin-top: 30px;
+   
+  
+}
+
+.buttons {
+    width: 150px;
+    height:50px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 2px solid #1d1160;
+    box-shadow: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 4px;
+    transition:ease-out 0.2s;
+     font-weight:bolder; 
+    transition:1.5s ;
+}
+.buttons:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    z-index: 1;
+
+       
+}
+
+
+.inputs p {
+    font-weight: bold;
+    color:#1d1160;
+    font-size: larger;
+    
+}
+
+#date-input {
+    width: 170px;
+    text-align: center;
+}
+
+.input-border {
+    border: 1px solid black;
+}
+
+/* Template grid, subgrid, & children */
+#template-grid-container {
+    grid-area: templates;
+    background-image:  url(./images/blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin: 0px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-rows: 8% 28% 8% 15% 8% 8%;
+    
+}
+
+/* Template subgrid on-load assignments */
+#initial-output {
+    font-family:"phosphate"; 
+    font-size: 5vmin;
+
+    grid-row: 2;
+    align-self: flex-start;
+}
+
+#names-output {
+    font-family: "Phosphate"; 
+    font-size: 4vmin;
+
+    grid-row: 3;
+}
+
+#last-name-output {
+    font-family: "Phosphate"; 
+    font-size: 5vmin;
+
+    grid-row: 4;
+}
+
+#date-output {
+    font-family: "Rockwell"; 
+    font-size: 3vmin;
+
+    grid-row: 5;
+}
+
+#location-output {
+    font-family: "Rockwell"; 
+    font-size: 3vmin;
+
+    grid-row: 6;
+}
+
+
+
+/* tablet view port */
+@media only screen and (max-width: 850px) {
+.main-grid {
+    grid-template-rows:10% 65%;
+           }
+.buttons {
+        width: 100px;
+        height: 40px;
+        font-size:12px;
+        padding-top: 0%;
+        margin-bottom: 8px;
+        
+        }  
+.header{
+    font-size: small;
+            }   
+.inputs p{
+    font-size: 80%;
+    font-weight: bolder;
+    }
+
+#initial-output{
+    font-size:4vmin ;
+}
+#names-output{
+    font-size: 3vmin;
+}
+#last-name-output{
+    font-size: 4vmin;
+}
+#date-output{
+    font-size: 2vmin;
+}
+#location-output{
+    font-size: 2vmin;
+}
+
+
+} 
+
+
